@@ -1,7 +1,22 @@
 [
-  { "nombre": "Martillo", "precio": 25000, "categoria": "Herramientas" },
-  { "nombre": "Destornillador", "precio": 15000, "categoria": "Herramientas" },
-  { "nombre": "Taladro", "precio": 120000, "categoria": "Herramientas" },
-  { "nombre": "Pintura blanca", "precio": 30000, "categoria": "Pinturas" },
-  { "nombre": "Tornillos", "precio": 5000, "categoria": "Fijación" }
+  { "nombre": "Martillo", "precio": 25000, "categoria": "Herramientas", "descripcion": "Martillo de acero con mango de goma" },
+  { "nombre": "Destornillador", "precio": 15000, "categoria": "Herramientas", "descripcion": "Set de 3 destornilladores de precisión" },
+  { "nombre": "Taladro", "precio": 120000, "categoria": "Herramientas eléctricas", "descripcion": "Taladro percutor 500W" },
+  { "nombre": "Pintura blanca", "precio": 30000, "categoria": "Pinturas", "descripcion": "Galón de pintura vinílica blanca" },
+  { "nombre": "Tornillos", "precio": 5000, "categoria": "Fijación", "descripcion": "Set de 100 tornillos variados" },
+  { "nombre": "Cinta aislante", "precio": 3500, "categoria": "Electricidad", "descripcion": "Rollo de cinta aislante negra" },
+  { "nombre": "Adhesivo industrial", "precio": 8000, "categoria": "Pegamentos", "descripcion": "Pegamento fuerte multiusos" },
+  { "nombre": "Brocha 2 pulgadas", "precio": 4500, "categoria": "Pinturas", "descripcion": "Brocha de cerdas sintéticas" },
+  { "nombre": "Llave inglesa", "precio": 18000, "categoria": "Herramientas", "descripcion": "Llave ajustable de acero inoxidable" },
+  { "nombre": "Flexómetro", "precio": 9000, "categoria": "Medición", "descripcion": "Cinta métrica de 5 metros" },
+  { "nombre": "Serrucho", "precio": 22000, "categoria": "Corte", "descripcion": "Serrucho manual de acero templado" },
+  { "nombre": "Nivel", "precio": 18000, "categoria": "Medición", "descripcion": "Nivel de burbuja profesional 30cm" },
+  { "nombre": "Lija gruesa", "precio": 2000, "categoria": "Abrasivos", "descripcion": "Hoja de lija grano 40" },
+  { "nombre": "Tubo PVC", "precio": 7000, "categoria": "Fontanería", "descripcion": "Tubo de PVC 1/2 pulgada, 2 metros" },
+  { "nombre": "Guantes de trabajo", "precio": 5500, "categoria": "Protección", "descripcion": "Guantes industriales de tela reforzada" },
+  { "nombre": "Mascarilla N95", "precio": 6000, "categoria": "Protección", "descripcion": "Mascarilla respiratoria para polvo y pintura" },
+  { "nombre": "Lámpara recargable", "precio": 35000, "categoria": "Iluminación", "descripcion": "Lámpara LED portátil de 10W" },
+  { "nombre": "Cable eléctrico", "precio": 12000, "categoria": "Electricidad", "descripcion": "Rollo de cable de cobre de 10 metros" },
+  { "nombre": "Destapador de cañerías", "precio": 9000, "categoria": "Fontanería", "descripcion": "Herramienta manual para desatascar tuberías" },
+  { "nombre": "Silicona sellante", "precio": 9500, "categoria": "Pegamentos", "descripcion": "Cartucho de silicona para sellado de juntas" }
 ]
