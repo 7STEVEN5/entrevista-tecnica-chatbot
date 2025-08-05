@@ -1,0 +1,7 @@
+[
+  { "nombre": "Martillo", "precio": 25000, "categoria": "Herramientas" },
+  { "nombre": "Destornillador", "precio": 15000, "categoria": "Herramientas" },
+  { "nombre": "Taladro", "precio": 120000, "categoria": "Herramientas" },
+  { "nombre": "Pintura blanca", "precio": 30000, "categoria": "Pinturas" },
+  { "nombre": "Tornillos", "precio": 5000, "categoria": "Fijación" }
+]
