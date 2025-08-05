@@ -35,6 +35,7 @@ Cosas que aprendí / Mejoraría
 -Usar normalize y palabras clave para que el bot entienda mejor.
 -Mejoraría la interfaz, pondría íconos o imágenes de los productos.
 -le agregaria ubicación en tiempo real para que lleguen a la tienda directamente 
+-opciones para calificar la atencion 
 
 
 Estado actual:

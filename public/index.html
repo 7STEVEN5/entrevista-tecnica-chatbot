@@ -3,20 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chatbot Ferretería</title>
+  <title>FerreBot - Tu Asistente Virtual de Ferretería</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="chat-container">
     <div class="chat-header">
-      🤖 FerreBot – Tu asesor virtual
+      🤖 FerreBot – Tu Asistente Virtual de Ferretería
     </div>
+    
     <div class="chat-box" id="chat-box">
-      <div class="bot-message">¡Hola! ¿En qué puedo ayudarte hoy? 🔧</div>
+      <div class="message bot-message">
+        <div class="message-content">
+          ¡Hola! 👋 Soy FerreBot, tu asistente virtual.
+
+¿En qué puedo ayudarte hoy? Puedo:
+• Mostrarte productos por categoría
+• Consultar precios
+• Gestionar tu carrito de compras
+• Ayudarte con el proceso de compra
+
+Escribe "ayuda" para más información.
+        </div>
+      </div>
     </div>
+
+    <div class="quick-actions">
+      <span class="quick-action" onclick="enviarMensajeRapido('herramientas')">🔧 Herramientas</span>
+      <span class="quick-action" onclick="enviarMensajeRapido('pinturas')">🎨 Pinturas</span>
+      <span class="quick-action" onclick="enviarMensajeRapido('electricidad')">⚡ Electricidad</span>
+      <span class="quick-action" onclick="enviarMensajeRapido('ver carrito')">🛒 Mi Carrito</span>
+      <span class="quick-action" onclick="enviarMensajeRapido('ayuda')">❓ Ayuda</span>
+    </div>
+    
     <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Escribe tu mensaje..." />
-      <button onclick="enviarMensaje()">Enviar</button>
+      <div class="input-container">
+        <input 
+          type="text" 
+          id="user-input" 
+          placeholder="Escribe tu mensaje..." 
+          maxlength="500"
+        />
+      </div>
+      <button id="send-button" onclick="enviarMensaje()">Enviar</button>
     </div>
   </div>
 
