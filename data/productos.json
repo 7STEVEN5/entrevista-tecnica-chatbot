@@ -1,22 +1,485 @@
 [
-  { "nombre": "Martillo", "precio": 25000, "categoria": "Herramientas", "descripcion": "Martillo de acero con mango de goma" },
-  { "nombre": "Destornillador", "precio": 15000, "categoria": "Herramientas", "descripcion": "Set de 3 destornilladores de precisión" },
-  { "nombre": "Taladro", "precio": 120000, "categoria": "Herramientas eléctricas", "descripcion": "Taladro percutor 500W" },
-  { "nombre": "Pintura blanca", "precio": 30000, "categoria": "Pinturas", "descripcion": "Galón de pintura vinílica blanca" },
-  { "nombre": "Tornillos", "precio": 5000, "categoria": "Fijación", "descripcion": "Set de 100 tornillos variados" },
-  { "nombre": "Cinta aislante", "precio": 3500, "categoria": "Electricidad", "descripcion": "Rollo de cinta aislante negra" },
-  { "nombre": "Adhesivo industrial", "precio": 8000, "categoria": "Pegamentos", "descripcion": "Pegamento fuerte multiusos" },
-  { "nombre": "Brocha 2 pulgadas", "precio": 4500, "categoria": "Pinturas", "descripcion": "Brocha de cerdas sintéticas" },
-  { "nombre": "Llave inglesa", "precio": 18000, "categoria": "Herramientas", "descripcion": "Llave ajustable de acero inoxidable" },
-  { "nombre": "Flexómetro", "precio": 9000, "categoria": "Medición", "descripcion": "Cinta métrica de 5 metros" },
-  { "nombre": "Serrucho", "precio": 22000, "categoria": "Corte", "descripcion": "Serrucho manual de acero templado" },
-  { "nombre": "Nivel", "precio": 18000, "categoria": "Medición", "descripcion": "Nivel de burbuja profesional 30cm" },
-  { "nombre": "Lija gruesa", "precio": 2000, "categoria": "Abrasivos", "descripcion": "Hoja de lija grano 40" },
-  { "nombre": "Tubo PVC", "precio": 7000, "categoria": "Fontanería", "descripcion": "Tubo de PVC 1/2 pulgada, 2 metros" },
-  { "nombre": "Guantes de trabajo", "precio": 5500, "categoria": "Protección", "descripcion": "Guantes industriales de tela reforzada" },
-  { "nombre": "Mascarilla N95", "precio": 6000, "categoria": "Protección", "descripcion": "Mascarilla respiratoria para polvo y pintura" },
-  { "nombre": "Lámpara recargable", "precio": 35000, "categoria": "Iluminación", "descripcion": "Lámpara LED portátil de 10W" },
-  { "nombre": "Cable eléctrico", "precio": 12000, "categoria": "Electricidad", "descripcion": "Rollo de cable de cobre de 10 metros" },
-  { "nombre": "Destapador de cañerías", "precio": 9000, "categoria": "Fontanería", "descripcion": "Herramienta manual para desatascar tuberías" },
-  { "nombre": "Silicona sellante", "precio": 9500, "categoria": "Pegamentos", "descripcion": "Cartucho de silicona para sellado de juntas" }
+  {
+    "id": 1,
+    "nombre": "Martillo",
+    "precio": 25000,
+    "categoria": "herramientas",
+    "descripcion": "Martillo de acero con mango antideslizante",
+    "sugerencias": ["Clavos", "Guantes de trabajo"]
+  },
+  {
+    "id": 2,
+    "nombre": "Destornillador",
+    "precio": 15000,
+    "categoria": "herramientas",
+    "descripcion": "Set de 5 destornilladores de precisión",
+    "sugerencias": ["Tornillos"]
+  },
+  {
+    "id": 3,
+    "nombre": "Taladro",
+    "precio": 120000,
+    "categoria": "herramientas",
+    "descripcion": "Taladro eléctrico 800W con reversa",
+    "sugerencias": ["Brocas", "Extensión"]
+  },
+  {
+    "id": 4,
+    "nombre": "Alicate",
+    "precio": 18000,
+    "categoria": "herramientas",
+    "descripcion": "Alicate universal con aislamiento eléctrico",
+    "sugerencias": ["Cinta aislante"]
+  },
+  {
+    "id": 5,
+    "nombre": "Llave inglesa",
+    "precio": 22000,
+    "categoria": "herramientas",
+    "descripcion": "Llave ajustable de acero cromado",
+    "sugerencias": ["Tuercas"]
+  },
+  {
+    "id": 6,
+    "nombre": "Pintura blanca",
+    "precio": 30000,
+    "categoria": "pinturas",
+    "descripcion": "Pintura vinílica blanca para interior",
+    "sugerencias": ["Brocha 2 pulgadas", "Rodillo"]
+  },
+  {
+    "id": 7,
+    "nombre": "Esmalte sintético",
+    "precio": 28000,
+    "categoria": "pinturas",
+    "descripcion": "Esmalte brillante rojo para metal",
+    "sugerencias": ["Brocha"]
+  },
+  {
+    "id": 8,
+    "nombre": "Rodillo",
+    "precio": 18000,
+    "categoria": "pinturas",
+    "descripcion": "Rodillo para pintar paredes rugosas",
+    "sugerencias": ["Pintura blanca"]
+  },
+  {
+    "id": 9,
+    "nombre": "Brocha 2 pulgadas",
+    "precio": 5000,
+    "categoria": "pinturas",
+    "descripcion": "Brocha de cerdas sintéticas",
+    "sugerencias": ["Pintura"]
+  },
+  {
+    "id": 10,
+    "nombre": "Diluyente",
+    "precio": 7000,
+    "categoria": "pinturas",
+    "descripcion": "Diluyente universal para esmaltes",
+    "sugerencias": ["Esmalte sintético"]
+  },
+  {
+    "id": 11,
+    "nombre": "Cable eléctrico",
+    "precio": 12000,
+    "categoria": "electricidad",
+    "descripcion": "Cable de cobre 2x1.5mm, 10 metros",
+    "sugerencias": ["Cinta aislante"]
+  },
+  {
+    "id": 12,
+    "nombre": "Interruptor",
+    "precio": 6000,
+    "categoria": "electricidad",
+    "descripcion": "Interruptor sencillo para pared",
+    "sugerencias": ["Caja eléctrica"]
+  },
+  {
+    "id": 13,
+    "nombre": "Tomacorriente",
+    "precio": 6500,
+    "categoria": "electricidad",
+    "descripcion": "Tomacorriente doble con tierra física",
+    "sugerencias": ["Caja eléctrica"]
+  },
+  {
+    "id": 14,
+    "nombre": "Extensión",
+    "precio": 18000,
+    "categoria": "electricidad",
+    "descripcion": "Extensión de 5 metros, color negro",
+    "sugerencias": ["Taladro"]
+  },
+  {
+    "id": 15,
+    "nombre": "Multímetro",
+    "precio": 35000,
+    "categoria": "electricidad",
+    "descripcion": "Multímetro digital con funciones básicas",
+    "sugerencias": ["Pilas"]
+  },
+  {
+    "id": 16,
+    "nombre": "Tornillos",
+    "precio": 5000,
+    "categoria": "fijación",
+    "descripcion": "Tornillos para madera 3x25mm x100",
+    "sugerencias": ["Destornillador"]
+  },
+  {
+    "id": 17,
+    "nombre": "Clavos",
+    "precio": 4500,
+    "categoria": "fijación",
+    "descripcion": "Clavos para concreto 2x30mm x50",
+    "sugerencias": ["Martillo"]
+  },
+  {
+    "id": 18,
+    "nombre": "Tarugos",
+    "precio": 3500,
+    "categoria": "fijación",
+    "descripcion": "Tarugos plásticos para muro",
+    "sugerencias": ["Tornillos"]
+  },
+  {
+    "id": 19,
+    "nombre": "Tuercas",
+    "precio": 4000,
+    "categoria": "fijación",
+    "descripcion": "Tuercas hexagonales M8 x50",
+    "sugerencias": ["Llave inglesa"]
+  },
+  {
+    "id": 20,
+    "nombre": "Arandelas",
+    "precio": 3000,
+    "categoria": "fijación",
+    "descripcion": "Arandelas planas M8 x100",
+    "sugerencias": ["Tuercas"]
+  }
+,
+  {
+    "id": 21,
+    "nombre": "Gafas de seguridad",
+    "precio": 7000,
+    "categoria": "protección",
+    "descripcion": "Lentes transparentes con protección lateral",
+    "sugerencias": ["Taladro"]
+  },
+  {
+    "id": 22,
+    "nombre": "Casco de seguridad",
+    "precio": 20000,
+    "categoria": "protección",
+    "descripcion": "Casco industrial color amarillo con ajuste",
+    "sugerencias": ["Botas de seguridad"]
+  },
+  {
+    "id": 23,
+    "nombre": "Botas de seguridad",
+    "precio": 55000,
+    "categoria": "protección",
+    "descripcion": "Botas con punta de acero y suela antideslizante",
+    "sugerencias": ["Casco de seguridad"]
+  },
+  {
+    "id": 24,
+    "nombre": "Nivel",
+    "precio": 18000,
+    "categoria": "herramientas",
+    "descripcion": "Nivel de burbuja profesional 30cm",
+    "sugerencias": ["Flexómetro"]
+  },
+  {
+    "id": 25,
+    "nombre": "Flexómetro",
+    "precio": 9000,
+    "categoria": "herramientas",
+    "descripcion": "Cinta métrica de 5 metros",
+    "sugerencias": ["Nivel"]
+  },
+  {
+    "id": 26,
+    "nombre": "Serrucho",
+    "precio": 22000,
+    "categoria": "herramientas",
+    "descripcion": "Serrucho manual de acero templado",
+    "sugerencias": ["Guantes de trabajo"]
+  },
+  {
+    "id": 27,
+    "nombre": "Lija gruesa",
+    "precio": 2000,
+    "categoria": "abrasivos",
+    "descripcion": "Hoja de lija grano 40",
+    "sugerencias": ["Lija fina"]
+  },
+  {
+    "id": 28,
+    "nombre": "Lija fina",
+    "precio": 2500,
+    "categoria": "abrasivos",
+    "descripcion": "Hoja de lija grano 180 para acabados suaves",
+    "sugerencias": ["Lija gruesa"]
+  },
+  {
+    "id": 29,
+    "nombre": "Silicona sellante",
+    "precio": 9500,
+    "categoria": "pegamentos",
+    "descripcion": "Cartucho de silicona para sellado de juntas",
+    "sugerencias": ["Pistola para silicona"]
+  },
+  {
+    "id": 30,
+    "nombre": "Pistola para silicona",
+    "precio": 12000,
+    "categoria": "pegamentos",
+    "descripcion": "Pistola aplicadora de cartuchos de silicona",
+    "sugerencias": ["Silicona sellante"]
+  },
+  {
+    "id": 31,
+    "nombre": "Cinta aislante",
+    "precio": 3500,
+    "categoria": "electricidad",
+    "descripcion": "Rollo de cinta aislante negra 10m",
+    "sugerencias": ["Cable eléctrico"]
+  },
+  {
+    "id": 32,
+    "nombre": "Tubo PVC",
+    "precio": 7000,
+    "categoria": "fontanería",
+    "descripcion": "Tubo de PVC 1/2 pulgada, 2 metros",
+    "sugerencias": ["Codos PVC"]
+  },
+  {
+    "id": 33,
+    "nombre": "Codos PVC",
+    "precio": 1500,
+    "categoria": "fontanería",
+    "descripcion": "Codo 90° para tubo PVC de 1/2 pulgada",
+    "sugerencias": ["Tubo PVC"]
+  },
+  {
+    "id": 34,
+    "nombre": "Te PVC",
+    "precio": 1800,
+    "categoria": "fontanería",
+    "descripcion": "Conector en T para tubería PVC",
+    "sugerencias": ["Tubo PVC", "Codos PVC"]
+  },
+  {
+    "id": 35,
+    "nombre": "Llave de paso",
+    "precio": 8500,
+    "categoria": "fontanería",
+    "descripcion": "Llave de paso metálica de 1/2 pulgada",
+    "sugerencias": ["Tubo PVC"]
+  },
+  {
+    "id": 36,
+    "nombre": "Lámpara recargable",
+    "precio": 35000,
+    "categoria": "iluminación",
+    "descripcion": "Lámpara LED portátil de 10W con batería",
+    "sugerencias": ["Extensión"]
+  },
+  {
+    "id": 37,
+    "nombre": "Foco LED 9W",
+    "precio": 5000,
+    "categoria": "iluminación",
+    "descripcion": "Foco LED luz blanca 6500K",
+    "sugerencias": ["Portalámparas"]
+  },
+  {
+    "id": 38,
+    "nombre": "Portalámparas",
+    "precio": 3500,
+    "categoria": "iluminación",
+    "descripcion": "Portalámparas plástico con rosca E27",
+    "sugerencias": ["Foco LED 9W"]
+  },
+  {
+    "id": 39,
+    "nombre": "Cinta teflón",
+    "precio": 1200,
+    "categoria": "fontanería",
+    "descripcion": "Cinta de teflón para sellado de roscas",
+    "sugerencias": ["Llave de paso"]
+  },
+  {
+    "id": 40,
+    "nombre": "Destapador de cañerías",
+    "precio": 9000,
+    "categoria": "fontanería",
+    "descripcion": "Herramienta manual para desatascar tuberías",
+    "sugerencias": ["Guantes de trabajo"]
+  }
+,
+  {
+    "id": 41,
+    "nombre": "Cinta métrica 3m",
+    "precio": 7000,
+    "categoria": "herramientas",
+    "descripcion": "Flexómetro de 3 metros con freno automático",
+    "sugerencias": ["Nivel"]
+  },
+  {
+    "id": 42,
+    "nombre": "Llave inglesa",
+    "precio": 18000,
+    "categoria": "herramientas",
+    "descripcion": "Llave ajustable de acero inoxidable",
+    "sugerencias": ["Destornillador"]
+  },
+  {
+    "id": 43,
+    "nombre": "Juego de llaves Allen",
+    "precio": 12000,
+    "categoria": "herramientas",
+    "descripcion": "Set de llaves hexagonales de varios tamaños",
+    "sugerencias": ["Llave inglesa"]
+  },
+  {
+    "id": 44,
+    "nombre": "Pintura negra",
+    "precio": 30000,
+    "categoria": "pinturas",
+    "descripcion": "Galón de pintura vinílica negra",
+    "sugerencias": ["Brocha 2 pulgadas"]
+  },
+  {
+    "id": 45,
+    "nombre": "Rodillo 9 pulgadas",
+    "precio": 8000,
+    "categoria": "pinturas",
+    "descripcion": "Rodillo de espuma para pintura de interiores",
+    "sugerencias": ["Pintura blanca"]
+  },
+  {
+    "id": 46,
+    "nombre": "Bandeja para pintura",
+    "precio": 4000,
+    "categoria": "pinturas",
+    "descripcion": "Bandeja plástica para rodillo",
+    "sugerencias": ["Rodillo 9 pulgadas"]
+  },
+  {
+    "id": 47,
+    "nombre": "Tornillo drywall",
+    "precio": 3000,
+    "categoria": "fijación",
+    "descripcion": "Caja con 100 tornillos para drywall",
+    "sugerencias": ["Destornillador"]
+  },
+  {
+    "id": 48,
+    "nombre": "Taco fisher",
+    "precio": 3500,
+    "categoria": "fijación",
+    "descripcion": "Set de 50 tacos plásticos con tornillo",
+    "sugerencias": ["Taladro"]
+  },
+  {
+    "id": 49,
+    "nombre": "Cable eléctrico THW 12",
+    "precio": 15000,
+    "categoria": "electricidad",
+    "descripcion": "Rollo de cable de cobre calibre 12 de 10 metros",
+    "sugerencias": ["Cinta aislante"]
+  },
+  {
+    "id": 50,
+    "nombre": "Toma corriente doble",
+    "precio": 4500,
+    "categoria": "electricidad",
+    "descripcion": "Tomacorriente blanco doble con puesta a tierra",
+    "sugerencias": ["Cable eléctrico"]
+  },
+  {
+    "id": 51,
+    "nombre": "Interruptor sencillo",
+    "precio": 4000,
+    "categoria": "electricidad",
+    "descripcion": "Interruptor de una vía color blanco",
+    "sugerencias": ["Caja de registro"]
+  },
+  {
+    "id": 52,
+    "nombre": "Caja de registro",
+    "precio": 3500,
+    "categoria": "electricidad",
+    "descripcion": "Caja plástica de 4x4 pulgadas para empotrar",
+    "sugerencias": ["Interruptor sencillo"]
+  },
+  {
+    "id": 53,
+    "nombre": "Cinta reflectiva",
+    "precio": 6000,
+    "categoria": "accesorios",
+    "descripcion": "Cinta adhesiva reflectiva para señalización",
+    "sugerencias": ["Casco de seguridad"]
+  },
+  {
+    "id": 54,
+    "nombre": "Alambre galvanizado",
+    "precio": 9000,
+    "categoria": "fijación",
+    "descripcion": "Rollo de alambre galvanizado calibre 16",
+    "sugerencias": ["Alicates"]
+  },
+  {
+    "id": 55,
+    "nombre": "Alicates",
+    "precio": 16000,
+    "categoria": "herramientas",
+    "descripcion": "Alicates universales con mango antideslizante",
+    "sugerencias": ["Alambre galvanizado"]
+  },
+  {
+    "id": 56,
+    "nombre": "Llave de tubo",
+    "precio": 26000,
+    "categoria": "herramientas",
+    "descripcion": "Llave de tubo tipo Stilson 12 pulgadas",
+    "sugerencias": ["Llave inglesa"]
+  },
+  {
+    "id": 57,
+    "nombre": "Tijeras para hojalata",
+    "precio": 22000,
+    "categoria": "herramientas",
+    "descripcion": "Tijeras de corte recto para lámina metálica",
+    "sugerencias": ["Guantes de trabajo"]
+  },
+  {
+    "id": 58,
+    "nombre": "Taladro inalámbrico",
+    "precio": 185000,
+    "categoria": "herramientas",
+    "descripcion": "Taladro recargable 20V con batería y cargador",
+    "sugerencias": ["Brocas", "Gafas de seguridad"]
+  },
+  {
+    "id": 59,
+    "nombre": "Brocas para madera",
+    "precio": 14000,
+    "categoria": "accesorios",
+    "descripcion": "Set de brocas para madera 3-10 mm",
+    "sugerencias": ["Taladro"]
+  },
+  {
+    "id": 60,
+    "nombre": "Brocas para concreto",
+    "precio": 16000,
+    "categoria": "accesorios",
+    "descripcion": "Set de brocas reforzadas para concreto",
+    "sugerencias": ["Taladro", "Gafas de seguridad"]
+  }
 ]
+
