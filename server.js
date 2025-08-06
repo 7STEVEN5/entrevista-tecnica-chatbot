@@ -10,12 +10,12 @@ app.use(express.json());
 // Cargar productos desde el archivo JSON
 const productos = JSON.parse(fs.readFileSync('./data/productos.json'));
 
-// Función mejorada para limpiar texto (mantiene acentos para mejor comparación)
+// Función mejorada para limpiar texto 
 const limpiarTexto = (texto) => {
   return texto.toLowerCase().trim();
 };
 
-// Función para normalizar texto (sin acentos para búsquedas flexibles)
+// Función para normalizar texto 
 const normalizarTexto = (texto) => {
   return texto.normalize('NFD')
     .replace(/\p{Diacritic}/gu, '')
@@ -73,12 +73,43 @@ function detectarIntencion(mensaje) {
   return null;
 }
 
+// Función para convertir números escritos en palabras a cifras
+function palabraANumero(texto) {
+  const numeros = {
+    'cero': 0, 'uno': 1, 'una': 1, 'dos': 2, 'tres': 3, 'cuatro': 4, 'cinco': 5,
+    'seis': 6, 'siete': 7, 'ocho': 8, 'nueve': 9, 'diez': 10,
+    'once': 11, 'doce': 12, 'trece': 13, 'catorce': 14, 'quince': 15,
+    'dieciséis': 16, 'dieciseis': 16, 'diecisiete': 17, 'dieciocho': 18, 
+    'diecinueve': 19, 'veinte': 20, 'veintiuno': 21, 'veintidos': 22, 
+    'veintidós': 22, 'veintitrés': 23, 'veintitres': 23, 'veinticuatro': 24,
+    'veinticinco': 25, 'treinta': 30, 'cuarenta': 40, 'cincuenta': 50
+  };
+  
+  const textoNormalizado = normalizarTexto(texto);
+  
+  for (const [palabra, numero] of Object.entries(numeros)) {
+    if (textoNormalizado.includes(normalizarTexto(palabra))) {
+      return numero;
+    }
+  }
+  
+  return null;
+}
+
 // Función mejorada para buscar productos
 function buscarProductoPorNombreYCantidad(mensaje) {
   let cantidad = 1;
+  
+  // Buscar cantidad en números
   const matchCantidad = mensaje.match(/\b(\d+)\b/);
   if (matchCantidad) {
     cantidad = parseInt(matchCantidad[1]);
+  } else {
+    // Buscar cantidad en palabras
+    const cantidadPalabra = palabraANumero(mensaje);
+    if (cantidadPalabra) {
+      cantidad = cantidadPalabra;
+    }
   }
 
   const mensajeNormalizado = normalizarTexto(mensaje);
@@ -274,7 +305,7 @@ Ejemplos de lo que puedes decir:
     const siguientes = productosCategoria.slice(inicio, inicio + 5);
     
     if (siguientes.length) {
-      respuesta = `📦 Más productos de ${estado.ultimaCategoria.toUpperCase()}:\n\n`;
+      respuesta = `📦 Productos adicionales de ${estado.ultimaCategoria.toUpperCase()}:\n\n`;
       siguientes.forEach((p, index) => {
         respuesta += `${inicio + index + 1}. ${p.nombre}\n   💰 $${p.precio.toLocaleString()} COP\n   📝 ${p.descripcion}\n\n`;
       });
